@@ -3,49 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <title>My Hometown West Chester, PA</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the content takes at least the full height of the viewport */
+        }
+
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+
+        nav {
+            margin: 0;
+            width: 70%;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        aside {
+            width: 400px;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #c41e3a;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c41e3a;
+        }
+
+        table {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #c41e3a;
+            color: white;
+        }
+
+        td:hover {
+            background-color: #f5f5f5;
+        }
+
+        iframe {
+            width: 100%; /* Make the iframe responsive within the sidebar */
+        }
+
+        main {
+            display: flex;
+            flex: 1; /* Allow the main content to grow and fill the available space */
+        }
+
+        article {
+            flex: 1; /* Allow the article to grow and fill the available space */
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 2px solid #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-        <img src="UniversityLogo.png" alt="Logo of The University of Arizona">
-        <span>
-            <a href="https://chaycass.github.io/mysite/index.html">Home Page</a> |
-            <a href="https://chaycass.github.io/mysite/hometown.html">Visit My Hometown Page</a> |
-            <a href="https://chaycass.github.io/mysite/gallery.html">See My Photo Gallery</a> |
-            <a href="https://chaycass.github.io/mysite/poem.html">Poem By Emily Dickinson</a>
-        </span>
-        <h1>West Chester, PA - USA</h1>
-        <section>
-            <h2>Location</h2>
-            <p>West Chester Pennsylvania is located 40 minutes from Philadelphia.
-                It is a borough and the county seat of Chester County.</p>
-        </section>
+        <header>
+            <img src="UniversityLogo.png" alt="Logo of The University of Arizona">
 
-        <section>
-            <h2>About</h2>
+            <nav>
+                <a href="https://chaycass.github.io/mysite/index.html">Home Page</a> |
+                <a href="https://chaycass.github.io/mysite/hometown.html">Visit My Hometown Page</a> |
+                <a href="https://chaycass.github.io/mysite/gallery.html">See My Photo Gallery</a> |
+                <a href="https://chaycass.github.io/mysite/poem.html">Poem By Emily Dickinson</a>
+            </nav>
+        </header>
 
-            <section>
-                <h3>College</h3>
-                <p>There is a liberal arts college known as West Chester University within the borough.  </p>
-            </section>
+        <div class="container">
+            <main>
+                <aside>
+                    <h2>Contact Form</h2>
+                    <form action="/submit-form" method="post">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
 
-            <section>
-                <h3>Population</h3>
-                <p>As of 2021, West Chester has a population of 18,630.</p>
-            </section>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
 
-            <section>
-                <h3>Area</h3>
-                <p>West Chester has a area of 1.846mi^2</p>
-            </section>
-        </section>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
 
-        <section>
-            <h2>Things To Do</h2>
-            <ul>
-                <li>Walk Downtown</li>
-                <li>Shopping</li>
-                <li>West Chester Railroad</li>
-            </ul>
-        </section>
+                        <button type="submit">Submit</button>
+                    </form>
+
+                    <h2>February 2024 Calendar</h2>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>NFL Super Bowl LVIII RSS Feed</h2>
+                    <iframe src="https://rss.com/podcasts/chaysecassity/" width="600" height="400" frameborder="0"></iframe>
+                </aside>
+                <article>
+                    <h1>West Chester, PA - USA</h1>
+                    <section>
+                        <h2>Location</h2>
+                        <p>West Chester Pennsylvania is located 40 minutes from Philadelphia.
+                            It is a borough and the county seat of Chester County.</p>
+                    </section>
+
+                    <section>
+                        <h2>About</h2>
+
+                        <section>
+                            <h3>College</h3>
+                            <p>There is a liberal arts college known as West Chester University within the borough.  </p>
+                        </section>
+
+                        <section>
+                            <h3>Population</h3>
+                            <p>As of 2021, West Chester has a population of 18,630.</p>
+                        </section>
+
+                        <section>
+                            <h3>Area</h3>
+                            <p>West Chester has a area of 1.846mi^2</p>
+                        </section>
+                    </section>
+
+                    <section>
+                        <h2>Things To Do</h2>
+                        <ul>
+                            <li>Walk Downtown</li>
+                            <li>Shopping</li>
+                            <li>West Chester Railroad</li>
+                        </ul>
+                    </section>
+                </article>
+            </main>
+        </div>
+
+
+
 
 </body>
 </html>
